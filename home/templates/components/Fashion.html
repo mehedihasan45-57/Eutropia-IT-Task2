@@ -1,0 +1,149 @@
+{% load static %}
+<div class="fashion_section">
+    <div id="main_slider" class="carousel slide" data-ride="carousel">
+      
+      <div class="carousel-inner">
+      {% for cloth,cloth1,cloth3 in zipped %}
+        {% if forloop.counter0 == 0 %}
+        <div class="carousel-item active">
+          <div class="container">
+            <h1 class="fashion_taital h24">Man & Woman Fashion</h1>
+            <div class="fashion_section_2">
+              <div class="row">
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{cloth.name}}</h4>
+                    <p class="price_text">
+                      Price <span style="color: #262626">$ {{cloth.price}}</span>
+                    </p>
+                    <div class="tshirt_img">
+                      <img src="{{ cloth.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{cloth1.name}}</h4>
+                    <p class="price_text">
+                      Price <span style="color: #262626">$ {{cloth1.price}}</span>
+                    </p>
+                    <div class="tshirt_img">
+                      <img src="{{ cloth1.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{cloth3.name}}</h4>
+                    <p class="price_text">
+                      Price <span style="color: #262626">$ {{cloth3.price}}</span>
+                    </p>
+                    <div class="tshirt_img">
+                      <img src="{{ cloth3.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        
+        {% endif %} 
+        {% endfor %} 
+      </div>
+
+       {% for cloth4,cloth5,cloth6 in zipped1 %}
+        {% if forloop.first %}
+          
+        {% else %}
+        <div class="carousel-item">
+          <div class="container">
+            <h1 class="fashion_taital h24">Man & Woman Fashion</h1>
+            <div class="fashion_section_2">
+              <div class="row">
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{cloth4.name}}</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ {{cloth4.price}}</span>
+                    </p>
+                    <div class="electronic_img">
+                       <img src="{{ cloth4.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{cloth5.name}}</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ {{cloth5.price}}</span>
+                    </p>
+                    <div class="electronic_img">
+                      <img src="{{ cloth5.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-4">
+                  <div class="box_main">
+                    <h4 class="shirt_text">{{cloth6.name}}</h4>
+                    <p class="price_text">
+                      Start Price <span style="color: #262626">$ {{cloth6.price}}</span>
+                    </p>
+                    <div class="electronic_img">
+                      <img src="{{ cloth6.image.url }}" />
+                    </div>
+                    <div class="btn_main">
+                      <div class="buy_bt"><a href="#">Buy Now</a></div>
+                      <div class="seemore_bt"><a href="#">See More</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#main_slider"
+        role="button"
+        data-slide="prev"
+      >
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#main_slider"
+        role="button"
+        data-slide="next"
+      >
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <br>
+  <br>
